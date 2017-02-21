@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import ru.babin.web.api.Ob;
 import ru.babin.web.api.Response;
-import ru.babin.web.service.SomeService;
+import ru.babin.web.service.MyService;
 
 
 @Controller
-public class TestController {
+public class MyController {
 	
 	@Autowired
-	private SomeService service;
+	private MyService service;
 	
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
 	@ResponseBody
