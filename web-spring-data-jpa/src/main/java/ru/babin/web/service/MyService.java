@@ -1,6 +1,5 @@
 package ru.babin.web.service;
 
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -30,11 +29,7 @@ public class MyService {
 	
 	private List <String> prepareList(Iterable <CustomerAccount> accounts){
 	    List <String> list  = new LinkedList<>();
-	    Iterator <CustomerAccount> it = accounts.iterator();
-	    while(it.hasNext()){
-	        CustomerAccount ca = it.next();
-	        list.add(ca.getName());
-	    }
+	    accounts.forEach(ca-> list.add(ca.getName()));
 	    return list;
 	}
 	
