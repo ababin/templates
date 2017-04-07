@@ -4,3 +4,4 @@ RemoteSystemsTempFiles
 .classpath
 .project
 .settings
+web-spring-jpa/logs/
