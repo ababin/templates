@@ -7,7 +7,8 @@ Application template for rapid start your web application (JETTY, SpringFramewor
 * JETTY embedded - **9.4.0.v20161208**
 * PostgreSQL JDBC driver - **9.1-901.jdbc4**
 * JDBC pool connection c3p0 - **0.9.2.1**
-* JPA2
+* JPA-2.1
+* Hibernate-core - **5.2.9.Final**
 
 ## Running
 For running application use follow:
@@ -26,3 +27,9 @@ and
 ~~~~
 GET http://localhost:8080/rest/mul/23,56
 ~~~~
+and
+~~~~
+GET http://localhost:8080/rest/accounts
+~~~~
+
+The last query requires DB. For details, please, see applicationContext-ds.xml
