@@ -10,11 +10,13 @@
 	<properties>
 		<java.ver>1.8</java.ver>
 		<spring.ver>4.3.6.RELEASE</spring.ver>
+		<springData.ver>1.11.1.RELEASE</springData.ver>
 		<slf4j.ver>1.7.9</slf4j.ver>
 		<log4j.ver>2.5</log4j.ver>
 		<jetty.ver>9.4.0.v20161208</jetty.ver>
 		<fasterxml.ver>2.8.6</fasterxml.ver>
 		<hibernate.ver>5.2.9.Final</hibernate.ver>
+		<lombok.ver>1.16.16</lombok.ver>
 	</properties>
 	<dependencies>
 
@@ -53,7 +55,7 @@
 		<dependency>
 	        <groupId>org.springframework.data</groupId>
 	        <artifactId>spring-data-jpa</artifactId>
-	        <version>1.11.1.RELEASE</version>
+	        <version>${springData.ver}</version>
 	    </dependency>
 
 
@@ -128,6 +130,13 @@
 			<version>9.1-901.jdbc4</version>
 		</dependency>
 
+		<!-- LOMBOK ==================================================================== -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.ver}</version>
+		</dependency>
+
 		<!-- TESTS =================================================================================== -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -141,7 +150,7 @@
 			<version>1.10.19</version>
 			<scope>test</scope>
 		</dependency>
-
+						
 	</dependencies>
 	<build>
 		<resources>

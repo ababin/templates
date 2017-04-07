@@ -10,6 +10,7 @@ Application template for rapid start your web application (JETTY, SpringFramewor
 * JDBC pool connection c3p0 - **0.9.2.1**
 * JPA-2.1
 * Hibernate-core - **5.2.9.Final**
+* Lombok - **1.16.16**
 
 ## Running
 For running application use follow:

@@ -1,34 +1,22 @@
 package ru.babin.web.dbmodel;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
+
+@ToString
+@EqualsAndHashCode(of={"id"})
 @javax.persistence.Entity
 @javax.persistence.Table(name = "CUSTOMER_ACCOUNT")
-public class CustomerAccount {
-
-    private Long id;
-    
-    private String name;
-        
+public @Data class CustomerAccount {
     
     @javax.persistence.Id
     @javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO)
     @javax.persistence.Column(name = "ID", nullable = false)
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
+    private Long id;
     
     @javax.persistence.Column(name = "NAME")
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    private String name;
         
 }   
