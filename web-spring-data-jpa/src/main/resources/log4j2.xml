@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration status="FATAL" shutdownHook="disable" monitorInterval="30">
+    <Appenders>
+        <!-- ============================== -->
+        <!-- Append messages to the console -->
+        <!-- ============================== -->
+        <RollingFile name="CONSOLE_APPENDER" fileName="logs/console.log"
+                     filePattern="logs/console-%d{yyyy-MM-dd}-%i.log.gz" append="true"
+                     ignoreExceptions="false">
+            <PatternLayout>
+                <Pattern>%d %-5p [%c{1.}:%L] %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+                                        
+    </Appenders>
+    
+    <Loggers>
+        <Logger name="ru.babin.web" additivity="false" level="INFO">
+            <AppenderRef ref="CONSOLE_APPENDER"/>
+        </Logger>
+
+        <!-- ROOT Logger -->
+        <Root level="INFO">
+            <AppenderRef ref="CONSOLE_APPENDER"/>
+        </Root>
+    </Loggers>
+</Configuration>
